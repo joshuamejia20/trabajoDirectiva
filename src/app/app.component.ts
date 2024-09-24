@@ -17,6 +17,7 @@ export class AppComponent {
   nombre = "";
   apellido = "";
   entradas: any[];
+  cargo: string="";
 
   constructor(){
     this.entradas =[

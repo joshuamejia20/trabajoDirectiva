@@ -3,10 +3,12 @@
 <form>
   <input type="text" name="nombre" [(ngModel)]="nombre"><br>
   <input type="text" name="apellido" [(ngModel)]="apellido"><br>
+  <input type="text" name="cargo" [(ngModel)]="cargo"><br>
   <input type="submit" value="Registrar" (click)="registrar_usuario()">
 </form>
 <br>
-<p *ngIf="registrado; else sinRegistrar">{{ mensaje }} con el nombre {{ nombre }} {{apellido}}</p>
+<!--<p *ngIf="registrado; else sinRegistrar">{{ mensaje }} con el nombre {{ nombre }} {{apellido}} y con el cargo <span [ngStyle]="{color:cargo=='Ingeniero' ? 'red': 'black'}">{{cargo}}</span></p>-->
+<p *ngIf="registrado; else sinRegistrar">{{ mensaje }} con el nombre {{ nombre }} {{apellido}} y con el cargo <span [ngClass]="{paraIngenieros: cargo=='Ingeniero'}">{{cargo}}</span></p>
 <ng-template #sinRegistrar>
   <p>Nadie registrado</p>
 </ng-template>
