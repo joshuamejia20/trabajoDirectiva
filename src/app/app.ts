@@ -16,6 +16,22 @@ export class App {
   nombre = "";
   apellido = "";
 
+  entradas: any[];
+
+  constructor(){
+    this.entradas = [
+      {
+        titulo: "Python, cada día más presente"
+      },
+      {
+        titulo: "Java, presente en más de 30 años"
+      },
+      {
+        titulo: "JavaScript, cada día más funcional"
+      }
+    ];
+  }
+
   registrar_usuario(){
     this.mensaje = "Usuario registrado";
     this.registrado = true;

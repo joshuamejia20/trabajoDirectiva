@@ -9,3 +9,12 @@
 </ng-template>
 
 <p *ngIf="registrado; else sinRegistrar">Mensaje: {{ mensaje }} con el nombre de {{nombre}} y el apellido {{ apellido}}</p>
+
+<ul>
+  <li  *ngFor="let entrada of entradas; let i = index">
+    <span style="font-weight: bold; font-size: large;">
+      {{ entrada.titulo }}
+    </span>
+    . Entrada {{ (i+1) }}
+  </li>
+</ul>
