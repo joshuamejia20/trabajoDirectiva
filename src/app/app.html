@@ -2,13 +2,14 @@
 <form>
   <input type="text" name="nombre" [(ngModel)]="nombre"><br>
   <input type="text" name="apellido" [(ngModel)]="apellido"><br>
+  <input type="text" name="cargo" [(ngModel)]="cargo"><br>
   <input type="submit" value="registrar" (click)="registrar_usuario()">
 </form><br>
 <ng-template #sinRegistrar>
   <p>Nadie registrado</p>
 </ng-template>
 
-<p *ngIf="registrado; else sinRegistrar">Mensaje: {{ mensaje }} con el nombre de {{nombre}} y el apellido {{ apellido}}</p>
+<p *ngIf="registrado; else sinRegistrar">Mensaje: {{ mensaje }} con el nombre de {{nombre}} y el apellido {{ apellido}} y con el cargo de <span [ngClass]="{paraIngenieros: cargo=='Ingeniero'}">{{cargo}}</span></p>
 
 <ul>
   <li  *ngFor="let entrada of entradas; let i = index">

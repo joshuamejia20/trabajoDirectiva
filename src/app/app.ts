@@ -15,6 +15,7 @@ export class App {
   registrado = false;
   nombre = "";
   apellido = "";
+  cargo = "";
 
   entradas: any[];
 
